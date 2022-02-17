@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
-import NewMeetupsForm from "../components/meetups/NewMeetupForm";
+import NewMeetupForm from "../components/meetups/NewMeetupForm";
 
 function NewMeetupsPage() {
-    const navigate = useNavigate();
+    let navigate = useNavigate();
 
   function addMeetupHandler(meetupData) {
     fetch(
@@ -16,14 +16,14 @@ function NewMeetupsPage() {
         },
       }
     ).then(()=>{
-        navigate.replace('/')
+        navigate('/', { replace: true });
     })
   }
 
   return (
     <section>
       <h1>Add New Meetup</h1>
-      <NewMeetupsForm onAddMeetup={addMeetupHandler} />
+      <NewMeetupForm onAddMeetup={addMeetupHandler} />
     </section>
   );
 }
