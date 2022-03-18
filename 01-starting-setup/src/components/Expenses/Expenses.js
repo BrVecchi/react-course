@@ -7,13 +7,13 @@ const Expenses = (props) => {
         <Card className="expenses">
             <h2>Let's get started!</h2>
             <ExpenseItem
-                {...props.expenses[0]} />
+                {...props.items[0]} />
             <ExpenseItem
-                {...props.expenses[1]} />
+                {...props.items[1]} />
             <ExpenseItem
-                {...props.expenses[2]} />
+                {...props.items[2]} />
             <ExpenseItem
-                {...props.expenses[3]} />
+                {...props.items[3]} />
         </Card>)
 }
 
